@@ -4,7 +4,6 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Consultora Digital PyME',
   description: 'Transformación digital para PyMEs',
-  charset: 'utf-8',
 }
 
 export default function RootLayout({
