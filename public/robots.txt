@@ -1,0 +1,34 @@
+# Robots.txt for Consultora Digital PyME
+# https://www.robotstxt.org
+
+User-agent: *
+Allow: /
+Disallow: /.next/
+Disallow: /node_modules/
+Disallow: /__next/
+
+# Crawl delay and request rate (in seconds)
+Crawl-delay: 1
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+Priority: high
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://consulting-pymes.vercel.app/sitemap.xml

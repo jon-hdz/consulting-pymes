@@ -115,8 +115,10 @@ export default function Home() {
               className="btn btn-wa"
               href="https://wa.me"
               rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
               target="_blank"
-              title="Contáctanos por WhatsApp"
+              title="Contáctanos por WhatsApp - Respuesta en menos de 24h"
+              aria-label="Contactar por WhatsApp"
             >
               <SVGWhatsApp />
               Hablar por WhatsApp
@@ -231,8 +233,10 @@ export default function Home() {
               className="btn btn-wa"
               href="https://wa.me"
               rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
               target="_blank"
               title="Contáctanos por WhatsApp - Respuesta en menos de 24h"
+              aria-label="Contactar por WhatsApp"
             >
               <SVGWhatsApp />
               WhatsApp
@@ -241,6 +245,7 @@ export default function Home() {
               className="btn btn-msg"
               href="#"
               title="Contáctanos por Messenger"
+              aria-label="Contactar por Messenger"
             >
               <SVGMessenger />
               Messenger
@@ -278,8 +283,10 @@ export default function Home() {
                   className="foot-contact-item"
                   href="https://wa.me"
                   rel="noopener noreferrer"
+                  referrerPolicy="no-referrer"
                   target="_blank"
-                  title="Contáctanos por WhatsApp"
+                  title="Contáctanos por WhatsApp - Respuesta en menos de 24h"
+                  aria-label="Contactar por WhatsApp"
                 >
                   <SVGWhatsApp />
                   WhatsApp
@@ -288,6 +295,7 @@ export default function Home() {
                   className="foot-contact-item"
                   href="#"
                   title="Contáctanos por Messenger"
+                  aria-label="Contactar por Messenger"
                 >
                   <SVGMessenger />
                   Messenger
