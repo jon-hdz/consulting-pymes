@@ -98,7 +98,7 @@ export default function Home() {
           <div className="hero-cta">
             <a
               className="btn btn-wa"
-              href="https://wa.me/525559662632"
+              href="https://wa.me/525559662632?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consultor%C3%ADa%20sobre%20transformaci%C3%B3n%20digital%20para%20mi%20negocio"
               rel="noopener noreferrer"
               referrerPolicy="no-referrer"
               target="_blank"
@@ -216,7 +216,7 @@ export default function Home() {
           <div className="cta-buttons">
             <a
               className="btn btn-wa"
-              href="https://wa.me/525559662632"
+              href="https://wa.me/525559662632?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consultor%C3%ADa%20sobre%20transformaci%C3%B3n%20digital%20para%20mi%20negocio"
               rel="noopener noreferrer"
               referrerPolicy="no-referrer"
               target="_blank"
@@ -266,7 +266,7 @@ export default function Home() {
               <ul>
                 <li><a
                   className="foot-contact-item"
-                  href="https://wa.me/525559662632"
+                  href="https://wa.me/525559662632?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consultor%C3%ADa%20sobre%20transformaci%C3%B3n%20digital%20para%20mi%20negocio"
                   rel="noopener noreferrer"
                   referrerPolicy="no-referrer"
                   target="_blank"
