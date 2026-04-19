@@ -73,7 +73,7 @@ export default function Home() {
         <div className="wrap nav-inner">
           <a className="brand" href="#">
             <span className="brand-mark">
-              <Image src="/favicon.svg" alt="Consultora Digital PyME Logo" width={32} height={32} priority />
+              <Image src="/favicon.svg" alt="Consultora Digital PyME Logo" width={45} height={45} priority />
             </span>
             Consultora Digital PyME
           </a>
@@ -98,7 +98,7 @@ export default function Home() {
           <div className="hero-cta">
             <a
               className="btn btn-wa"
-              href="https://wa.me"
+              href="https://wa.me/525559662632"
               rel="noopener noreferrer"
               referrerPolicy="no-referrer"
               target="_blank"
@@ -216,7 +216,7 @@ export default function Home() {
           <div className="cta-buttons">
             <a
               className="btn btn-wa"
-              href="https://wa.me"
+              href="https://wa.me/525559662632"
               rel="noopener noreferrer"
               referrerPolicy="no-referrer"
               target="_blank"
@@ -247,7 +247,7 @@ export default function Home() {
             <div className="foot">
               <a className="brand" href="#">
                 <span className="brand-mark">
-                  <Image src="/favicon.svg" alt="Consultora Digital PyME Logo" width={32} height={32} />
+                  <Image src="/favicon.svg" alt="Consultora Digital PyME Logo" width={48} height={48} />
                 </span>
                 Consultora Digital PyME
               </a>
@@ -266,7 +266,7 @@ export default function Home() {
               <ul>
                 <li><a
                   className="foot-contact-item"
-                  href="https://wa.me"
+                  href="https://wa.me/525559662632"
                   rel="noopener noreferrer"
                   referrerPolicy="no-referrer"
                   target="_blank"
