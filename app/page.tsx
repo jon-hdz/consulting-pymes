@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const SVGArrow = () => (
   <svg
@@ -15,22 +16,6 @@ const SVGArrow = () => (
   >
     <title>Siguiente</title>
     <path d="M5 12h14M13 5l7 7-7 7"></path>
-  </svg>
-)
-
-const SVGLightning = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-    role="img"
-  >
-    <title>Consultora Digital PyME</title>
-    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
   </svg>
 )
 
@@ -88,7 +73,7 @@ export default function Home() {
         <div className="wrap nav-inner">
           <a className="brand" href="#">
             <span className="brand-mark">
-              <SVGLightning />
+              <Image src="/favicon.svg" alt="Consultora Digital PyME Logo" width={32} height={32} priority />
             </span>
             Consultora Digital PyME
           </a>
@@ -262,7 +247,7 @@ export default function Home() {
             <div className="foot">
               <a className="brand" href="#">
                 <span className="brand-mark">
-                  <SVGLightning />
+                  <Image src="/favicon.svg" alt="Consultora Digital PyME Logo" width={32} height={32} />
                 </span>
                 Consultora Digital PyME
               </a>
