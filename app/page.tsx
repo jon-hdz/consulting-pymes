@@ -134,7 +134,7 @@ export default function Home() {
               <div className="svc-top"><span className="svc-dot"></span><span className="svc-cat">Presencia</span></div>
               <div>
                 <h3>Presencia Digital</h3>
-                <p>Web, redes y reputación que generan confianza y atraen clientes.</p>
+                <p>Diseñamos y optimizamos tu sitio web, redes sociales y reputación online para que los clientes te encuentren y confíen en ti. Desde estrategia SEO hasta gestión de contenido, todo enfocado en convertir visitas en ventas.</p>
               </div>
             </article>
 
@@ -143,7 +143,7 @@ export default function Home() {
               <div className="svc-top"><span className="svc-dot"></span><span className="svc-cat">Eficiencia</span></div>
               <div>
                 <h3>Automatización</h3>
-                <p>Automatizamos tareas repetitivas puntuales para que tu equipo se enfoque en lo que importa.</p>
+                <p>Eliminamos las tareas repetitivas que consumen horas: facturación, seguimiento de leads, sincronización de datos. Implementamos flujos de trabajo automatizados que liberan a tu equipo para actividades estratégicas que generan crecimiento.</p>
               </div>
             </article>
 
@@ -152,7 +152,7 @@ export default function Home() {
               <div className="svc-top"><span className="svc-dot"></span><span className="svc-cat">Visibilidad</span></div>
               <div>
                 <h3>Reportes y Métricas</h3>
-                <p>Tableros simples y reportes claros para que entiendas cómo va tu negocio sin necesitar un analista.</p>
+                <p>Creamos dashboards intuitivos con los indicadores que realmente importan: ventas, clientes, rentabilidad. Datos claros en tiempo real para tomar decisiones rápidas, sin necesidad de analistas o reportes complicados.</p>
               </div>
             </article>
 
@@ -161,7 +161,7 @@ export default function Home() {
               <div className="svc-top"><span className="svc-dot"></span><span className="svc-cat">Ejecución</span></div>
               <div>
                 <h3>Implementación</h3>
-                <p>Ponemos en marcha las herramientas digitales que tu negocio necesita, sin dolores de cabeza.</p>
+                <p>Desplegamos e integramos las herramientas digitales que necesitas: CRM, e-commerce, sistemas de gestión. Configuración, migración de datos y testing incluido. Tu equipo comienza a usar las herramientas desde el primer día.</p>
               </div>
             </article>
 
@@ -170,7 +170,7 @@ export default function Home() {
               <div className="svc-top"><span className="svc-dot"></span><span className="svc-cat">Personas</span></div>
               <div>
                 <h3>Capacitación</h3>
-                <p>Acompañamos a tu equipo para que adopte y aproveche cada herramienta al máximo.</p>
+                <p>Tu equipo es clave. Ofrecemos capacitación personalizada, documentación clara y soporte continuo para que dominen las nuevas herramientas. Menos frustración, más productividad, resultados sostenibles en el tiempo.</p>
               </div>
             </article>
           </div>
