@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_MX',
-    url: 'https://consulting-pymes.vercel.app',
+    url: 'https://jonathanhdz.xyz',
     title: 'Consultora Digital PyME | Transformación Digital Empresarial',
     description: 'Soluciones digitales para PyMEs en México: presencia web, automatización, reportes y capacitación. Respuesta en menos de 24h.',
     siteName: 'Consultora Digital PyME',
     images: [
       {
-        url: 'https://consulting-pymes.vercel.app/og-image.jpg',
+        url: 'https://jonathanhdz.xyz/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Consultora Digital PyME - Transformación Digital',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Consultora Digital PyME | Transformación Digital',
     description: 'Acompañamos PyMEs en su transformación digital. Respuesta en menos de 24h.',
-    images: ['https://consulting-pymes.vercel.app/og-image.jpg'],
+    images: ['https://jonathanhdz.xyz/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://consulting-pymes.vercel.app',
+    canonical: 'https://jonathanhdz.xyz',
   },
 }
 
