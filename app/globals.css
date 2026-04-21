@@ -264,9 +264,18 @@ h2 {
 .svc[data-tone="teal"]:hover .svc-index { -webkit-text-stroke-color: rgba(20,184,166,0.55); }
 
 /* ---------- ABOUT (Quiénes Somos) ---------- */
+section:has(.about-grid) {
+  position: relative;
+  background:
+    radial-gradient(70% 55% at 85%, #3b82f659, #0000 60%),
+    radial-gradient(55% 50% at 15% 90%, #2d6cff2e, #0000 60%),
+    linear-gradient(#eff2fe 0%, #bed8eb 100%);
+  overflow: hidden;
+}
 .about-grid {
   display: grid; grid-template-columns: repeat(2, 1fr);
   gap: 32px; margin-top: 40px;
+  position: relative;
 }
 .about-card {
   background: #fff;
