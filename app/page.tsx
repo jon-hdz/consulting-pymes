@@ -203,33 +203,33 @@ export default function Home() {
           <div className="label">Quiénes Somos</div>
           <h2>Transformación digital que funciona en la realidad</h2>
 
-          <div className="services-grid">
-            <article className="svc" data-tone="teal">
-              <div className="svc-top"><SVGIdea /></div>
+          <div className="about-grid">
+            <article className="about-card">
+              <div className="about-icon"><SVGIdea /></div>
               <div>
                 <h3>Por qué existimos</h3>
                 <p>Vimos PyMEs con grandes ideas, equipos talentosos y procesos manuales que les robaban horas. Decidimos ser ese puente: acompañar la transformación digital desde la estrategia hasta el resultado concreto.</p>
               </div>
             </article>
 
-            <article className="svc" data-tone="blue">
-              <div className="svc-top"><SVGBridge /></div>
+            <article className="about-card">
+              <div className="about-icon"><SVGBridge /></div>
               <div>
                 <h3>Cómo trabajamos</h3>
                 <p>No vendemos soluciones genéricas. Entendemos tu negocio, diagnosticamos tus frenos, diseñamos un plan realista y lo ejecutamos paso a paso junto a tu equipo. Sin teoría sin aplicación, sin promesas infladas.</p>
               </div>
             </article>
 
-            <article className="svc" data-tone="rose">
-              <div className="svc-top"><SVGAchieve /></div>
+            <article className="about-card">
+              <div className="about-icon"><SVGAchieve /></div>
               <div>
                 <h3>Qué hemos logrado</h3>
                 <p>Más de 20 PyMEs transformadas. Procesos que ahorran 40 horas/mes, sistemas que triplican la visibilidad del negocio. Cada una, con resultados medibles y sostenibles en el tiempo.</p>
               </div>
             </article>
 
-            <article className="svc" data-tone="violet">
-              <div className="svc-top"><SVGValues /></div>
+            <article className="about-card">
+              <div className="about-icon"><SVGValues /></div>
               <div>
                 <h3>En qué creemos</h3>
                 <p>La tecnología sirve al negocio, no al revés. Las PyMEs merecen herramientas que potencien su agilidad. La transformación digital no es un proyecto que termina: evoluciona, y por eso acompañamos en el tiempo.</p>
@@ -248,7 +248,7 @@ export default function Home() {
 
           <div className="services-grid">
             <article className="svc" data-tone="blue">
-              <div className="svc-top"><span className="svc-dot"></span><SVGPresencia /><span className="svc-cat">Presencia</span></div>
+              <div className="svc-top"><SVGPresencia /></div>
               <div>
                 <h3>Presencia Digital</h3>
                 <p>Diseñamos y optimizamos tu sitio web, redes sociales y reputación online para que los clientes te encuentren y confíen en ti. Desde estrategia SEO hasta gestión de contenido, todo enfocado en convertir visitas en ventas.</p>
@@ -256,7 +256,7 @@ export default function Home() {
             </article>
 
             <article className="svc" data-tone="amber">
-              <div className="svc-top"><span className="svc-dot"></span><SVGAutomacion /><span className="svc-cat">Eficiencia</span></div>
+              <div className="svc-top"><SVGAutomacion /></div>
               <div>
                 <h3>Automatización</h3>
                 <p>Eliminamos las tareas repetitivas que consumen horas: facturación, seguimiento de leads, sincronización de datos. Implementamos flujos de trabajo automatizados que liberan a tu equipo para actividades estratégicas que generan crecimiento.</p>
@@ -264,7 +264,7 @@ export default function Home() {
             </article>
 
             <article className="svc" data-tone="violet">
-              <div className="svc-top"><span className="svc-dot"></span><SVGMetricas /><span className="svc-cat">Visibilidad</span></div>
+              <div className="svc-top"><SVGMetricas /></div>
               <div>
                 <h3>Reportes y Métricas</h3>
                 <p>Creamos dashboards intuitivos con los indicadores que realmente importan: ventas, clientes, rentabilidad. Datos claros en tiempo real para tomar decisiones rápidas, sin necesidad de analistas o reportes complicados.</p>
@@ -272,7 +272,7 @@ export default function Home() {
             </article>
 
             <article className="svc" data-tone="rose">
-              <div className="svc-top"><span className="svc-dot"></span><SVGImplementacion /><span className="svc-cat">Ejecución</span></div>
+              <div className="svc-top"><SVGImplementacion /></div>
               <div>
                 <h3>Implementación</h3>
                 <p>Desplegamos e integramos las herramientas digitales que necesitas: CRM, e-commerce, sistemas de gestión. Configuración, migración de datos y testing incluido. Tu equipo comienza a usar las herramientas desde el primer día.</p>
@@ -280,7 +280,7 @@ export default function Home() {
             </article>
 
             <article className="svc" data-tone="teal">
-              <div className="svc-top"><span className="svc-dot"></span><SVGCapacitacion /><span className="svc-cat">Personas</span></div>
+              <div className="svc-top"><SVGCapacitacion /></div>
               <div>
                 <h3>Capacitación</h3>
                 <p>Tu equipo es clave. Ofrecemos capacitación personalizada, documentación clara y soporte continuo para que dominen las nuevas herramientas. Menos frustración, más productividad, resultados sostenibles en el tiempo.</p>
