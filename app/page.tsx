@@ -65,6 +65,82 @@ const SVGMessenger = () => (
   </svg>
 )
 
+const SVGPresencia = () => (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <title>Presencia Digital</title>
+    <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+    <line x1="8" y1="21" x2="16" y2="21"></line>
+    <line x1="12" y1="17" x2="12" y2="21"></line>
+  </svg>
+)
+
+const SVGAutomacion = () => (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <title>Automatización</title>
+    <circle cx="12" cy="12" r="1"></circle>
+    <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m5.08 0l4.24-4.24M1 12h6m6 0h6m-16.78 7.78l4.24-4.24m5.08 0l4.24 4.24"></path>
+  </svg>
+)
+
+const SVGMetricas = () => (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <title>Reportes y Métricas</title>
+    <line x1="3" y1="3" x2="3" y2="21"></line>
+    <line x1="3" y1="21" x2="21" y2="21"></line>
+    <path d="M7 12l3-3 3 3 4-4"></path>
+  </svg>
+)
+
+const SVGImplementacion = () => (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <title>Implementación</title>
+    <path d="M6 4h12v10H6z"></path>
+    <path d="M9 14v3M12 14v3M15 14v3"></path>
+    <line x1="3" y1="20" x2="21" y2="20"></line>
+  </svg>
+)
+
+const SVGCapacitacion = () => (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <title>Capacitación</title>
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+    <circle cx="9" cy="7" r="4"></circle>
+    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+  </svg>
+)
+
+const SVGIdea = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <title>Por qué existimos</title>
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+  </svg>
+)
+
+const SVGBridge = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <title>Cómo trabajamos</title>
+    <line x1="6" y1="12" x2="18" y2="12"></line>
+    <circle cx="9" cy="12" r="3"></circle>
+    <circle cx="15" cy="12" r="3"></circle>
+  </svg>
+)
+
+const SVGAchieve = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <title>Qué hemos logrado</title>
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+  </svg>
+)
+
+const SVGValues = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <title>En qué creemos</title>
+    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+  </svg>
+)
+
 export default function Home() {
   return (
     <>
@@ -121,6 +197,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ABOUT */}
+      <section>
+        <div className="wrap">
+          <div className="label">Quiénes Somos</div>
+          <h2>Transformación digital que funciona en la realidad</h2>
+
+          <div className="services-grid">
+            <article className="svc" data-tone="teal">
+              <div className="svc-top"><SVGIdea /></div>
+              <div>
+                <h3>Por qué existimos</h3>
+                <p>Vimos PyMEs con grandes ideas, equipos talentosos y procesos manuales que les robaban horas. Decidimos ser ese puente: acompañar la transformación digital desde la estrategia hasta el resultado concreto.</p>
+              </div>
+            </article>
+
+            <article className="svc" data-tone="blue">
+              <div className="svc-top"><SVGBridge /></div>
+              <div>
+                <h3>Cómo trabajamos</h3>
+                <p>No vendemos soluciones genéricas. Entendemos tu negocio, diagnosticamos tus frenos, diseñamos un plan realista y lo ejecutamos paso a paso junto a tu equipo. Sin teoría sin aplicación, sin promesas infladas.</p>
+              </div>
+            </article>
+
+            <article className="svc" data-tone="rose">
+              <div className="svc-top"><SVGAchieve /></div>
+              <div>
+                <h3>Qué hemos logrado</h3>
+                <p>Más de 20 PyMEs transformadas. Procesos que ahorran 40 horas/mes, sistemas que triplican la visibilidad del negocio. Cada una, con resultados medibles y sostenibles en el tiempo.</p>
+              </div>
+            </article>
+
+            <article className="svc" data-tone="violet">
+              <div className="svc-top"><SVGValues /></div>
+              <div>
+                <h3>En qué creemos</h3>
+                <p>La tecnología sirve al negocio, no al revés. Las PyMEs merecen herramientas que potencien su agilidad. La transformación digital no es un proyecto que termina: evoluciona, y por eso acompañamos en el tiempo.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section id="servicios">
         <div className="wrap">
@@ -130,8 +248,7 @@ export default function Home() {
 
           <div className="services-grid">
             <article className="svc" data-tone="blue">
-              <span className="svc-index">01</span>
-              <div className="svc-top"><span className="svc-dot"></span><span className="svc-cat">Presencia</span></div>
+              <div className="svc-top"><span className="svc-dot"></span><SVGPresencia /><span className="svc-cat">Presencia</span></div>
               <div>
                 <h3>Presencia Digital</h3>
                 <p>Diseñamos y optimizamos tu sitio web, redes sociales y reputación online para que los clientes te encuentren y confíen en ti. Desde estrategia SEO hasta gestión de contenido, todo enfocado en convertir visitas en ventas.</p>
@@ -139,8 +256,7 @@ export default function Home() {
             </article>
 
             <article className="svc" data-tone="amber">
-              <span className="svc-index">02</span>
-              <div className="svc-top"><span className="svc-dot"></span><span className="svc-cat">Eficiencia</span></div>
+              <div className="svc-top"><span className="svc-dot"></span><SVGAutomacion /><span className="svc-cat">Eficiencia</span></div>
               <div>
                 <h3>Automatización</h3>
                 <p>Eliminamos las tareas repetitivas que consumen horas: facturación, seguimiento de leads, sincronización de datos. Implementamos flujos de trabajo automatizados que liberan a tu equipo para actividades estratégicas que generan crecimiento.</p>
@@ -148,8 +264,7 @@ export default function Home() {
             </article>
 
             <article className="svc" data-tone="violet">
-              <span className="svc-index">03</span>
-              <div className="svc-top"><span className="svc-dot"></span><span className="svc-cat">Visibilidad</span></div>
+              <div className="svc-top"><span className="svc-dot"></span><SVGMetricas /><span className="svc-cat">Visibilidad</span></div>
               <div>
                 <h3>Reportes y Métricas</h3>
                 <p>Creamos dashboards intuitivos con los indicadores que realmente importan: ventas, clientes, rentabilidad. Datos claros en tiempo real para tomar decisiones rápidas, sin necesidad de analistas o reportes complicados.</p>
@@ -157,8 +272,7 @@ export default function Home() {
             </article>
 
             <article className="svc" data-tone="rose">
-              <span className="svc-index">04</span>
-              <div className="svc-top"><span className="svc-dot"></span><span className="svc-cat">Ejecución</span></div>
+              <div className="svc-top"><span className="svc-dot"></span><SVGImplementacion /><span className="svc-cat">Ejecución</span></div>
               <div>
                 <h3>Implementación</h3>
                 <p>Desplegamos e integramos las herramientas digitales que necesitas: CRM, e-commerce, sistemas de gestión. Configuración, migración de datos y testing incluido. Tu equipo comienza a usar las herramientas desde el primer día.</p>
@@ -166,8 +280,7 @@ export default function Home() {
             </article>
 
             <article className="svc" data-tone="teal">
-              <span className="svc-index">05</span>
-              <div className="svc-top"><span className="svc-dot"></span><span className="svc-cat">Personas</span></div>
+              <div className="svc-top"><span className="svc-dot"></span><SVGCapacitacion /><span className="svc-cat">Personas</span></div>
               <div>
                 <h3>Capacitación</h3>
                 <p>Tu equipo es clave. Ofrecemos capacitación personalizada, documentación clara y soporte continuo para que dominen las nuevas herramientas. Menos frustración, más productividad, resultados sostenibles en el tiempo.</p>
