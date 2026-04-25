@@ -35,14 +35,14 @@ export default function FormField({
     : `${baseInputClasses} hover:border-line-hover hover:shadow-sm focus:border-brand focus:shadow-md`;
 
   return (
-    <div className='mb-8 w-full'>
-      <label htmlFor={name} className='block mb-3 font-semibold text-15 text-ink'>
+    <div className='mb-6 w-full'>
+      <label htmlFor={name} className='block mb-2 font-semibold text-15 text-ink'>
         {label}
         {required && <span className='text-red-500 ml-1'>*</span>}
       </label>
 
       {description && (
-        <p className='text-13 text-muted mb-3 leading-relaxed'>{description}</p>
+        <p className='text-13 text-muted mb-2 leading-relaxed'>{description}</p>
       )}
 
       {type === 'textarea' ? (
@@ -88,7 +88,7 @@ export default function FormField({
       )}
 
       {error && (
-        <p className='mt-3 text-sm font-medium text-red-600 flex items-center gap-2'>
+        <p className='mt-2 text-sm font-medium text-red-600 flex items-center gap-2'>
           <svg className='w-4 h-4 flex-shrink-0' fill='currentColor' viewBox='0 0 20 20'>
             <path fillRule='evenodd' d='M18.001 13.001a1 1 0 00-1.414-1.414l-1.293 1.293V9.5a1 1 0 10-2 0v3.293l-1.293-1.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l4-4zM2 9.5a1 1 0 012 0v3.293l1.293-1.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414l1.293 1.293V9.5z' clipRule='evenodd' />
           </svg>

@@ -161,7 +161,7 @@ export default function BriefPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className='relative py-20 sm:py-24 bg-gradient-to-b from-[#0b1530] to-[#1a2847] overflow-hidden'>
+      <section className='relative py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-[#0b1530] to-[#1a2847] overflow-hidden'>
         {/* Background decoration */}
         <div className='absolute inset-0 overflow-hidden'>
           <div className='absolute -top-40 -right-40 w-80 h-80 bg-[#2d6cff]/5 rounded-full blur-3xl'></div>
@@ -175,11 +175,11 @@ export default function BriefPage() {
           </div>
 
           <h1 className='text-5xl sm:text-6xl font-bold text-white mb-6 leading-tight'>
-            Tu Brief <em className='not-italic text-[#2d6cff]'>Estratégico</em>
+            Tu Brief <em className='not-italic font-serif text-[#2d6cff]'>Estratégico</em>
           </h1>
 
           <p className='text-lg sm:text-xl text-[#cbd5e1] max-w-2xl mx-auto leading-relaxed'>
-            Responde 28 preguntas sobre tu negocio, mercado y objetivos. Nosotros generaremos 7 documentos estratégicos personalizados que te mostrarán exactamente por dónde empezar.
+            Cuéntanos sobre tu negocio. Analizaremos tu mercado, competencia y oportunidades para crear una estrategia personalizada que impulse tu crecimiento.
           </p>
         </div>
       </section>
@@ -200,7 +200,7 @@ export default function BriefPage() {
 
           {/* Error Alert */}
           {error && (
-            <div className='mb-8 p-4 bg-red-50/50 border border-red-200 rounded-[12px] backdrop-blur-sm'>
+            <div className='mb-8 p-4 bg-red-50/50 border border-red-200 rounded-lg backdrop-blur-sm'>
               <p className='text-red-700 font-medium flex items-center gap-2'>
                 <svg className='w-5 h-5 flex-shrink-0' fill='currentColor' viewBox='0 0 20 20'>
                   <path fillRule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z' clipRule='evenodd' />
@@ -217,7 +217,7 @@ export default function BriefPage() {
             </aside>
 
             {/* Form Content - Main */}
-            <main className='w-full lg:flex-1 space-y-16 sm:space-y-20'>
+            <main className='w-full lg:flex-1 space-y-12 sm:space-y-16'>
 
             {/* Sección 1: Sobre el Negocio */}
             {currentSection === 1 && (

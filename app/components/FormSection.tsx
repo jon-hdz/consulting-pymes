@@ -16,7 +16,7 @@ export default function FormSection({
   return (
     <div className='w-full animate-fade-in'>
       {/* Header */}
-      <div className='mb-8'>
+      <div className='mb-6'>
         {/* Decoration line */}
         <div className='h-1 w-12 bg-gradient-to-r from-brand to-brand-ink rounded-full mb-6' />
 
@@ -38,8 +38,8 @@ export default function FormSection({
       </div>
 
       {/* Content container */}
-      <div className='bg-white rounded-lg transition-all duration-200 px-6 sm:px-8 py-8 sm:py-8'>
-        <div className='grid grid-cols-1 gap-6'>
+      <div className='bg-white rounded-lg transition-all duration-200 px-5 sm:px-6 py-6'>
+        <div className='grid grid-cols-1 gap-4'>
           {children}
         </div>
       </div>
