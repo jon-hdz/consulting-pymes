@@ -4,6 +4,7 @@ import { useState } from 'react';
 import FormField from '@/app/components/FormField';
 import FormSection from '@/app/components/FormSection';
 import SuccessModal from '@/app/components/SuccessModal';
+import FormStepper from '@/app/components/FormStepper';
 
 interface FormData {
   // Sección 1
@@ -82,6 +83,16 @@ const INITIAL_FORM_DATA: FormData = {
 
 const TOTAL_SECTIONS = 7;
 
+const FORM_STEPS = [
+  { number: 1, label: 'Negocio' },
+  { number: 2, label: 'Mercado' },
+  { number: 3, label: 'Cliente' },
+  { number: 4, label: 'Competencia' },
+  { number: 5, label: 'Objetivos' },
+  { number: 6, label: 'Dolores' },
+  { number: 7, label: 'Contacto' },
+];
+
 export default function BriefPage() {
   const [currentSection, setCurrentSection] = useState(1);
   const [formData, setFormData] = useState<FormData>(INITIAL_FORM_DATA);
@@ -149,60 +160,72 @@ export default function BriefPage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className='hero'>
-        <div className='wrap hero-inner' style={{ maxWidth: '780px' }}>
-          <span className='eyebrow'>
-            <span className='dot'></span> Estrategia personalizada para tu PyME
-          </span>
-          <h1 className='hero-title'>Tu Brief <em>Estratégico</em></h1>
-          <p className='hero-sub'>
+      {/* Hero Section */}
+      <section className='relative py-20 sm:py-24 bg-gradient-to-b from-[#0b1530] to-[#1a2847] overflow-hidden'>
+        {/* Background decoration */}
+        <div className='absolute inset-0 overflow-hidden'>
+          <div className='absolute -top-40 -right-40 w-80 h-80 bg-[#2d6cff]/5 rounded-full blur-3xl'></div>
+          <div className='absolute -bottom-20 -left-40 w-80 h-80 bg-[#2d6cff]/5 rounded-full blur-3xl'></div>
+        </div>
+
+        <div className='relative max-w-4xl mx-auto px-6 text-center'>
+          <div className='inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#2d6cff]/10 border border-[#2d6cff]/30 rounded-full'>
+            <span className='inline-block w-2 h-2 bg-[#2d6cff] rounded-full'></span>
+            <span className='text-sm font-semibold text-[#2d6cff]'>Estrategia personalizada para tu PyME</span>
+          </div>
+
+          <h1 className='text-5xl sm:text-6xl font-bold text-white mb-6 leading-tight'>
+            Tu Brief <em className='not-italic text-[#2d6cff]'>Estratégico</em>
+          </h1>
+
+          <p className='text-lg sm:text-xl text-[#cbd5e1] max-w-2xl mx-auto leading-relaxed'>
             Responde 28 preguntas sobre tu negocio, mercado y objetivos. Nosotros generaremos 7 documentos estratégicos personalizados que te mostrarán exactamente por dónde empezar.
           </p>
         </div>
       </section>
 
       {/* Form Section */}
-      <section style={{ paddingTop: '110px', paddingBottom: '110px', backgroundColor: '#fff' }}>
-        <div className='wrap' style={{ maxWidth: '1120px' }}>
-          <div style={{ marginBottom: '40px' }}>
-            <div className='label'>Completa el formulario</div>
-            <h2 style={{
-              fontSize: 'clamp(30px, 3.6vw, 42px)',
-              lineHeight: '1.1',
-              letterSpacing: '-0.025em',
-              fontWeight: 700,
-              margin: '0 0 16px',
-              maxWidth: '620px',
-              color: 'var(--ink)'
-            }}>
+      <section className='relative py-20 sm:py-28 bg-white'>
+        <div className='max-w-7xl mx-auto px-6'>
+          {/* Form Header */}
+          <div className='mb-16 sm:mb-20'>
+            <p className='text-xs sm:text-sm font-bold text-[#2d6cff] uppercase tracking-widest mb-3'>Completa el formulario</p>
+            <h2 className='text-3xl sm:text-4xl font-bold text-[#0b1530] mb-4'>
               Generemos tu estrategia
             </h2>
+            <p className='text-lg text-[#5b6678] max-w-2xl'>
+              Tómate tu tiempo para responder con precisión. Mientras más información detallada proporciones, mejor será tu estrategia.
+            </p>
           </div>
-        </div>
 
-        <div className='wrap' style={{ maxWidth: '900px' }}>
           {/* Error Alert */}
           {error && (
-            <div style={{
-              marginBottom: '32px',
-              padding: '16px',
-              backgroundColor: 'rgba(239,68,68,0.05)',
-              border: '1px solid rgba(239,68,68,0.2)',
-              borderRadius: '14px'
-            }}>
-              <p style={{ color: '#ef4444', margin: 0 }}>{error}</p>
+            <div className='mb-8 p-4 bg-red-50/50 border border-red-200 rounded-[12px] backdrop-blur-sm'>
+              <p className='text-red-700 font-medium flex items-center gap-2'>
+                <svg className='w-5 h-5 flex-shrink-0' fill='currentColor' viewBox='0 0 20 20'>
+                  <path fillRule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z' clipRule='evenodd' />
+                </svg>
+                {error}
+              </p>
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className='space-y-12'>
+          <form onSubmit={handleSubmit} className='flex flex-col lg:flex-row gap-8 lg:gap-12'>
+            {/* Form Stepper - Sidebar */}
+            <aside className='w-full lg:w-1/4 lg:sticky lg:top-0 lg:h-fit'>
+              <FormStepper currentStep={currentSection} totalSteps={TOTAL_SECTIONS} steps={FORM_STEPS} />
+            </aside>
+
+            {/* Form Content - Main */}
+            <main className='w-full lg:flex-1 space-y-16 sm:space-y-20'>
+
             {/* Sección 1: Sobre el Negocio */}
             {currentSection === 1 && (
               <FormSection
                 title='Sobre el Negocio'
                 number={1}
                 totalSections={TOTAL_SECTIONS}
-                description='Información general sobre tu empresa'
+                description='Información general sobre tu empresa y operación'
               >
                 <FormField
                   label='Nombre de la Empresa'
@@ -265,7 +288,7 @@ export default function BriefPage() {
                 title='Sobre el Mercado'
                 number={2}
                 totalSections={TOTAL_SECTIONS}
-                description='Información del mercado y tendencias'
+                description='Información del mercado, tendencias y posicionamiento'
               >
                 <FormField
                   label='Nicho o Segmento Específico'
@@ -303,7 +326,7 @@ export default function BriefPage() {
                 title='Sobre el Cliente Ideal'
                 number={3}
                 totalSections={TOTAL_SECTIONS}
-                description='Perfil de tu cliente perfecto'
+                description='Perfil demográfico y psicográfico de tu cliente perfecto'
               >
                 <FormField
                   label='Perfil Demográfico'
@@ -341,7 +364,7 @@ export default function BriefPage() {
                 title='Sobre la Competencia'
                 number={4}
                 totalSections={TOTAL_SECTIONS}
-                description='Análisis competitivo'
+                description='Análisis competitivo: fortalezas, debilidades y diferenciación'
               >
                 <FormField
                   label='Competidores Principales (3-5)'
@@ -388,7 +411,7 @@ export default function BriefPage() {
                 title='Sobre Objetivos'
                 number={5}
                 totalSections={TOTAL_SECTIONS}
-                description='Define tus metas y KPIs'
+                description='Define tus metas, KPIs y objetivos de crecimiento'
               >
                 <FormField
                   label='Plazo de Objetivos'
@@ -438,7 +461,7 @@ export default function BriefPage() {
                 title='Sobre los Dolores y Retos'
                 number={6}
                 totalSections={TOTAL_SECTIONS}
-                description='Desafíos y limitaciones actuales'
+                description='Desafíos, limitaciones y recursos disponibles'
               >
                 <FormField
                   label='Mayor Reto Actual'
@@ -484,7 +507,7 @@ export default function BriefPage() {
                 title='Información de Contacto'
                 number={7}
                 totalSections={TOTAL_SECTIONS}
-                description='Cómo nos contactaremos contigo'
+                description='Cómo nos contactaremos contigo para enviar tu brief'
               >
                 <FormField
                   label='Nombre de Contacto'
@@ -528,103 +551,55 @@ export default function BriefPage() {
               </FormSection>
             )}
 
-            {/* Navigation Buttons */}
-            <div style={{ display: 'flex', gap: '12px', paddingTop: '32px', marginTop: '48px' }}>
-              <button
-                type='button'
-                onClick={handlePrev}
-                disabled={currentSection === 1}
-                style={{
-                  flex: 1,
-                  padding: '13px 22px',
-                  backgroundColor: 'rgba(45,108,255,0.08)',
-                  border: '1px solid var(--line)',
-                  color: 'var(--ink)',
-                  borderRadius: '10px',
-                  fontWeight: 600,
-                  fontSize: '14px',
-                  cursor: currentSection === 1 ? 'not-allowed' : 'pointer',
-                  opacity: currentSection === 1 ? 0.5 : 1,
-                  transition: 'background 0.15s ease, box-shadow 0.15s ease, transform 0.08s ease',
-                }}
-                onMouseEnter={(e) => !currentSection === 1 && (e.currentTarget.style.backgroundColor = 'rgba(45,108,255,0.12)')}
-                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'rgba(45,108,255,0.08)')}
-                onMouseDown={(e) => currentSection !== 1 && (e.currentTarget.style.transform = 'translateY(1px)')}
-                onMouseUp={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
-              >
-                ← Anterior
-              </button>
-
-              {currentSection < TOTAL_SECTIONS ? (
+              {/* Navigation Buttons */}
+              <div className='flex flex-col sm:flex-row gap-3 pt-8 mt-12 border-t-2 border-[#e4e9f1]'>
                 <button
                   type='button'
-                  onClick={handleNext}
-                  style={{
-                    flex: 1,
-                    padding: '13px 22px',
-                    backgroundColor: 'var(--brand)',
-                    color: '#fff',
-                    borderRadius: '10px',
-                    fontWeight: 600,
-                    fontSize: '14px',
-                    border: 0,
-                    cursor: 'pointer',
-                    boxShadow: '0 4px 12px rgba(45,108,255,0.35)',
-                    transition: 'background 0.15s ease, box-shadow 0.15s ease, transform 0.08s ease',
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'var(--brand-ink)')}
-                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'var(--brand)')}
-                  onMouseDown={(e) => (e.currentTarget.style.transform = 'translateY(1px)')}
-                  onMouseUp={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
+                  onClick={handlePrev}
+                  disabled={currentSection === 1}
+                  className={`flex-1 px-6 py-3.5 font-semibold rounded-[12px] transition-all duration-200 flex items-center justify-center gap-2 ${
+                    currentSection === 1
+                      ? 'bg-[#f0f4f9] text-[#94a3b8] cursor-not-allowed border-2 border-[#e4e9f1]'
+                      : 'bg-white border-2 border-[#e4e9f1] text-[#0b1530] hover:border-[#2d6cff] hover:bg-[#f8fafc] active:scale-95'
+                  }`}
                 >
-                  Siguiente →
+                  <span>←</span> Anterior
                 </button>
-              ) : (
-                <button
-                  type='submit'
-                  disabled={isLoading}
-                  style={{
-                    flex: 1,
-                    padding: '13px 22px',
-                    backgroundColor: 'var(--accent)',
-                    color: '#fff',
-                    borderRadius: '10px',
-                    fontWeight: 600,
-                    fontSize: '14px',
-                    border: 0,
-                    cursor: isLoading ? 'not-allowed' : 'pointer',
-                    boxShadow: '0 6px 18px rgba(34,197,94,0.35)',
-                    opacity: isLoading ? 0.5 : 1,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '8px',
-                    transition: 'background 0.15s ease, box-shadow 0.15s ease, transform 0.08s ease',
-                  }}
-                  onMouseEnter={(e) => !isLoading && (e.currentTarget.style.backgroundColor = 'var(--accent-ink)')}
-                  onMouseLeave={(e) => !isLoading && (e.currentTarget.style.backgroundColor = 'var(--accent)')}
-                  onMouseDown={(e) => !isLoading && (e.currentTarget.style.transform = 'translateY(1px)')}
-                  onMouseUp={(e) => !isLoading && (e.currentTarget.style.transform = 'translateY(0)')}
-                >
-                  {isLoading ? (
-                    <>
-                      <span style={{
-                        display: 'inline-block',
-                        width: '16px',
-                        height: '16px',
-                        border: '2px solid white',
-                        borderTopColor: 'transparent',
-                        borderRadius: '50%',
-                        animation: 'spin 1s linear infinite'
-                      }} />
-                      Enviando...
-                    </>
-                  ) : (
-                    'Enviar Brief'
-                  )}
-                </button>
-              )}
-            </div>
+
+                {currentSection < TOTAL_SECTIONS ? (
+                  <button
+                    type='button'
+                    onClick={handleNext}
+                    className='flex-1 px-6 py-3.5 font-semibold rounded-[12px] bg-gradient-to-r from-[#2d6cff] to-[#1f4fd1] text-white transition-all duration-200 hover:shadow-lg hover:from-[#2460e8] hover:to-[#1840bb] active:scale-95 flex items-center justify-center gap-2'
+                  >
+                    Siguiente <span>→</span>
+                  </button>
+                ) : (
+                  <button
+                    type='submit'
+                    disabled={isLoading}
+                    className={`flex-1 px-6 py-3.5 font-semibold rounded-[12px] transition-all duration-200 flex items-center justify-center gap-2 ${
+                      isLoading
+                        ? 'bg-[#22c55e]/50 text-white cursor-not-allowed opacity-60'
+                        : 'bg-gradient-to-r from-[#22c55e] to-[#16a34a] text-white hover:shadow-lg hover:from-[#20b854] hover:to-[#15933d] active:scale-95'
+                    }`}
+                  >
+                    {isLoading ? (
+                      <>
+                        <svg className='w-5 h-5 animate-spin' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                          <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z' />
+                        </svg>
+                        Enviando...
+                      </>
+                    ) : (
+                      <>
+                        <span>✓</span> Enviar Brief
+                      </>
+                    )}
+                  </button>
+                )}
+              </div>
+            </main>
           </form>
         </div>
       </section>
