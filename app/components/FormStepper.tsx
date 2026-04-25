@@ -45,13 +45,13 @@ export default function FormStepper({
                   <span
                     className={`
                       flex items-center justify-center w-7 h-7 rounded-full
-                      box-border transition-all duration-200
+                      border-2 box-border transition-all duration-200
                       ${
                         isPending
-                          ? 'border border-[#c9d3e5] bg-white'
+                          ? 'border-line bg-white'
                           : isDone
-                            ? 'border border-brand bg-white text-brand'
-                            : 'border border-brand bg-brand text-white'
+                            ? 'border-brand bg-white text-brand'
+                            : 'border-brand bg-brand text-white'
                       }
                     `}
                     style={
@@ -138,13 +138,13 @@ export default function FormStepper({
                   <span
                     className={`
                       flex items-center justify-center w-6 h-6 rounded-full
-                      flex-shrink-0 transition-all duration-200
+                      border-2 flex-shrink-0 transition-all duration-200
                       ${
                         isDone
-                          ? 'border border-brand bg-white text-brand'
+                          ? 'border-brand bg-white text-brand'
                           : isActive
-                            ? 'border border-brand bg-brand text-white'
-                            : 'border border-[#c9d3e5] bg-white'
+                            ? 'border-brand bg-brand text-white'
+                            : 'border-line bg-white'
                       }
                     `}
                     style={

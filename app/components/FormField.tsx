@@ -82,6 +82,7 @@ export default function FormField({
           onChange={onChange}
           placeholder={placeholder}
           minLength={minLength}
+          {...(type === 'number' && { min: '0' })}
           className={inputClasses}
           required={required}
         />

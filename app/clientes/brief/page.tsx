@@ -174,8 +174,8 @@ export default function BriefPage() {
             <span className='text-sm font-semibold text-[#2d6cff]'>Estrategia personalizada para tu PyME</span>
           </div>
 
-          <h1 className='text-5xl sm:text-6xl font-bold text-white mb-6 leading-tight'>
-            Tu Brief <em className='not-italic font-serif text-[#2d6cff]'>Estratégico</em>
+          <h1 className='hero-title text-white'>
+            Tu Brief <em>Estratégico</em>
           </h1>
 
           <p className='text-lg sm:text-xl text-[#cbd5e1] max-w-2xl mx-auto leading-relaxed'>
