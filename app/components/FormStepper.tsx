@@ -45,22 +45,19 @@ export default function FormStepper({
                   <span
                     className={`
                       flex items-center justify-center w-7 h-7 rounded-full
-                      border-2 box-border transition-all duration-200
+                      border box-border transition-all duration-200
                       ${
                         isPending
-                          ? 'border-line bg-white'
+                          ? 'bg-white'
                           : isDone
-                            ? 'border-brand bg-white text-brand'
-                            : 'border-brand bg-brand text-white'
+                            ? 'bg-white text-brand'
+                            : 'bg-brand text-white'
                       }
                     `}
-                    style={
-                      isActive
-                        ? {
-                            boxShadow: '0 0 0 4px rgba(45,108,255,0.18)',
-                          }
-                        : undefined
-                    }
+                    style={{
+                      borderColor: isPending ? '#c9d3e5' : '#2d6cff',
+                      ...(isActive && { boxShadow: '0 0 0 4px rgba(45,108,255,0.18)' }),
+                    }}
                   >
                     {isDone ? (
                       <svg
@@ -138,22 +135,19 @@ export default function FormStepper({
                   <span
                     className={`
                       flex items-center justify-center w-6 h-6 rounded-full
-                      border-2 flex-shrink-0 transition-all duration-200
+                      border flex-shrink-0 transition-all duration-200
                       ${
                         isDone
-                          ? 'border-brand bg-white text-brand'
+                          ? 'bg-white text-brand'
                           : isActive
-                            ? 'border-brand bg-brand text-white'
-                            : 'border-line bg-white'
+                            ? 'bg-brand text-white'
+                            : 'bg-white'
                       }
                     `}
-                    style={
-                      isActive
-                        ? {
-                            boxShadow: '0 0 0 4px rgba(45,108,255,0.18)',
-                          }
-                        : undefined
-                    }
+                    style={{
+                      borderColor: isDone || isActive ? '#2d6cff' : '#c9d3e5',
+                      ...(isActive && { boxShadow: '0 0 0 4px rgba(45,108,255,0.18)' }),
+                    }}
                   >
                     {isDone ? (
                       <svg

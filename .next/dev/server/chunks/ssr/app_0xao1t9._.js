@@ -526,12 +526,15 @@ function FormStepper({ currentStep, totalSteps, steps = defaultSteps }) {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: `
                       flex items-center justify-center w-7 h-7 rounded-full
-                      border-2 box-border transition-all duration-200
-                      ${isPending ? 'border-line bg-white' : isDone ? 'border-brand bg-white text-brand' : 'border-brand bg-brand text-white'}
+                      border box-border transition-all duration-200
+                      ${isPending ? 'bg-white' : isDone ? 'bg-white text-brand' : 'bg-brand text-white'}
                     `,
-                                            style: isActive ? {
-                                                boxShadow: '0 0 0 4px rgba(45,108,255,0.18)'
-                                            } : undefined,
+                                            style: {
+                                                borderColor: isPending ? '#c9d3e5' : '#2d6cff',
+                                                ...isActive && {
+                                                    boxShadow: '0 0 0 4px rgba(45,108,255,0.18)'
+                                                }
+                                            },
                                             children: isDone ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                                                 viewBox: "0 0 24 24",
                                                 fill: "none",
@@ -544,18 +547,18 @@ function FormStepper({ currentStep, totalSteps, steps = defaultSteps }) {
                                                     points: "7 12.5 10.5 16 17 9"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/FormStepper.tsx",
-                                                    lineNumber: 75,
+                                                    lineNumber: 72,
                                                     columnNumber: 25
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/FormStepper.tsx",
-                                                lineNumber: 66,
+                                                lineNumber: 63,
                                                 columnNumber: 23
                                             }, this) : isActive ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "w-2.5 h-2.5 rounded-full bg-white"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/FormStepper.tsx",
-                                                lineNumber: 78,
+                                                lineNumber: 75,
                                                 columnNumber: 23
                                             }, this) : null
                                         }, void 0, false, {
@@ -571,7 +574,7 @@ function FormStepper({ currentStep, totalSteps, steps = defaultSteps }) {
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/FormStepper.tsx",
-                                            lineNumber: 84,
+                                            lineNumber: 81,
                                             columnNumber: 21
                                         }, this)
                                     ]
@@ -594,12 +597,12 @@ function FormStepper({ currentStep, totalSteps, steps = defaultSteps }) {
                                         children: step.label
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/FormStepper.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 95,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/FormStepper.tsx",
-                                    lineNumber: 97,
+                                    lineNumber: 94,
                                     columnNumber: 17
                                 }, this)
                             ]
@@ -638,12 +641,15 @@ function FormStepper({ currentStep, totalSteps, steps = defaultSteps }) {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: `
                       flex items-center justify-center w-6 h-6 rounded-full
-                      border-2 flex-shrink-0 transition-all duration-200
-                      ${isDone ? 'border-brand bg-white text-brand' : isActive ? 'border-brand bg-brand text-white' : 'border-line bg-white'}
+                      border flex-shrink-0 transition-all duration-200
+                      ${isDone ? 'bg-white text-brand' : isActive ? 'bg-brand text-white' : 'bg-white'}
                     `,
-                                            style: isActive ? {
-                                                boxShadow: '0 0 0 4px rgba(45,108,255,0.18)'
-                                            } : undefined,
+                                            style: {
+                                                borderColor: isDone || isActive ? '#2d6cff' : '#c9d3e5',
+                                                ...isActive && {
+                                                    boxShadow: '0 0 0 4px rgba(45,108,255,0.18)'
+                                                }
+                                            },
                                             children: isDone ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                                                 viewBox: "0 0 24 24",
                                                 fill: "none",
@@ -656,23 +662,23 @@ function FormStepper({ currentStep, totalSteps, steps = defaultSteps }) {
                                                     points: "7 12.5 10.5 16 17 9"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/FormStepper.tsx",
-                                                    lineNumber: 168,
+                                                    lineNumber: 162,
                                                     columnNumber: 25
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/FormStepper.tsx",
-                                                lineNumber: 159,
+                                                lineNumber: 153,
                                                 columnNumber: 23
                                             }, this) : isActive ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "w-2 h-2 rounded-full bg-white"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/FormStepper.tsx",
-                                                lineNumber: 171,
+                                                lineNumber: 165,
                                                 columnNumber: 23
                                             }, this) : null
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/FormStepper.tsx",
-                                            lineNumber: 138,
+                                            lineNumber: 135,
                                             columnNumber: 19
                                         }, this),
                                         idx < steps.length - 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -684,19 +690,19 @@ function FormStepper({ currentStep, totalSteps, steps = defaultSteps }) {
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/FormStepper.tsx",
-                                            lineNumber: 177,
+                                            lineNumber: 171,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, step.number, true, {
                                     fileName: "[project]/app/components/FormStepper.tsx",
-                                    lineNumber: 132,
+                                    lineNumber: 129,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/app/components/FormStepper.tsx",
-                            lineNumber: 124,
+                            lineNumber: 121,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -704,18 +710,18 @@ function FormStepper({ currentStep, totalSteps, steps = defaultSteps }) {
                             children: currentStepLabel
                         }, void 0, false, {
                             fileName: "[project]/app/components/FormStepper.tsx",
-                            lineNumber: 194,
+                            lineNumber: 188,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/FormStepper.tsx",
-                    lineNumber: 123,
+                    lineNumber: 120,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/components/FormStepper.tsx",
-                lineNumber: 122,
+                lineNumber: 119,
                 columnNumber: 7
             }, this)
         ]
