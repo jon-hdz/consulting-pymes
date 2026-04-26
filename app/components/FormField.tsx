@@ -28,21 +28,21 @@ export default function FormField({
   description,
 }: FormFieldProps) {
   const baseInputClasses =
-    'w-full px-4 py-3 rounded-lg border border-line bg-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand placeholder:text-muted text-ink';
+    'w-full px-4 py-3 rounded-lg border border-gray-200 bg-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 placeholder:text-gray-600 text-slate-950';
 
   const inputClasses = error
     ? `${baseInputClasses} border-red-500 bg-red-50 focus:border-red-500 focus:ring-red-500/20`
-    : `${baseInputClasses} hover:border-line-hover hover:shadow-sm focus:border-brand focus:shadow-md`;
+    : `${baseInputClasses} hover:border-gray-300 hover:shadow-sm focus:border-blue-600 focus:shadow-md`;
 
   return (
     <div className='mb-6 w-full'>
-      <label htmlFor={name} className='block mb-2 font-semibold text-15 text-ink'>
+      <label htmlFor={name} className='block mb-2 font-semibold text-base text-slate-950'>
         {label}
         {required && <span className='text-red-500 ml-1'>*</span>}
       </label>
 
       {description && (
-        <p className='text-13 text-muted mb-2 leading-relaxed'>{description}</p>
+        <p className='text-sm text-gray-600 mb-2 leading-relaxed'>{description}</p>
       )}
 
       {type === 'textarea' ? (

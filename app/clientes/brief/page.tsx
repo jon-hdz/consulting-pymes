@@ -210,14 +210,14 @@ export default function BriefPage() {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className='flex flex-col lg:flex-row gap-8 lg:gap-12'>
+          <form onSubmit={handleSubmit} className='flex flex-col md:flex-row gap-8 md:gap-12'>
             {/* Form Stepper - Sidebar */}
-            <aside className='w-full lg:w-1/4 lg:sticky lg:top-0 lg:h-fit'>
+            <aside className='w-full md:w-64 md:sticky md:top-4 md:h-fit'>
               <FormStepper currentStep={currentSection} totalSteps={TOTAL_SECTIONS} steps={FORM_STEPS} />
             </aside>
 
             {/* Form Content - Main */}
-            <main className='w-full lg:flex-1 space-y-12 sm:space-y-16'>
+            <main className='w-full md:flex-1 space-y-12 sm:space-y-16'>
 
             {/* Sección 1: Sobre el Negocio */}
             {currentSection === 1 && (

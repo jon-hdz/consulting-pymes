@@ -31,7 +31,7 @@ export default function FormStepper({
   return (
     <>
       {/* Desktop: Vertical Stepper */}
-      <div className="hidden md:block w-64">
+      <div className="hidden md:block w-full">
         <ol className="list-none m-0 p-0">
           {steps.map((step, idx) => {
             const isDone = currentStep > step.number;
@@ -50,8 +50,8 @@ export default function FormStepper({
                         isPending
                           ? 'bg-white'
                           : isDone
-                            ? 'bg-white text-brand'
-                            : 'bg-brand text-white'
+                            ? 'bg-white text-blue-600'
+                            : 'bg-blue-600 text-white'
                       }
                     `}
                     style={{
@@ -94,11 +94,11 @@ export default function FormStepper({
                 <div className="pl-3.5 flex items-center">
                   <span
                     className={`
-                      text-15 leading-4
+                      text-base leading-4
                       ${
                         isPending
-                          ? 'text-muted font-normal'
-                          : 'text-ink font-semibold'
+                          ? 'text-gray-600 font-normal'
+                          : 'text-slate-950 font-semibold'
                       }
                     `}
                     style={{
@@ -138,9 +138,9 @@ export default function FormStepper({
                       border flex-shrink-0 transition-all duration-200
                       ${
                         isDone
-                          ? 'bg-white text-brand'
+                          ? 'bg-white text-blue-600'
                           : isActive
-                            ? 'bg-brand text-white'
+                            ? 'bg-blue-600 text-white'
                             : 'bg-white'
                       }
                     `}
@@ -185,7 +185,7 @@ export default function FormStepper({
           </ol>
 
           {/* Current Step Label */}
-          <div className="mt-3.5 text-15 font-semibold text-ink">
+          <div className="mt-3.5 text-base font-semibold text-slate-950">
             {currentStepLabel}
           </div>
         </div>
